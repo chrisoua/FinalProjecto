@@ -1,1 +1,27 @@
-"Project where we have them input the state name and year and we print the wildfire data from that state and year. The data can have how many fires and probably how many acres burned."
+#"Project where we have them input the state name and year and we print the wildfire data from that state and year. The data can have how many fires and probably how many acres burned."
+#User imputs a state and a year, then we print the number of fires and arces burned. 
+#1- Start with the class
+class Wildfire_Record:
+  def__init__(self, state, year, fires, arces_burned):
+    self.state = state 
+    self.year = year
+    self.fires = fires
+    self.acres_burned = acres_burned
+
+  def display_info(self):
+    print(f"State: {self.state}")
+    print(f"Year: {self.year}")
+    print(f"Fires: {self.fires}")
+    print(f"Acres Burned: {self.acres_burned}")
+#1 We first had to create the class and give it attributes. Our aim is to find fires and arces burned
+# through the name of the state and the year, so those were the only 4 attributes needed. 
+
+#2
+wildfire_data = { 
+  ("California", 2020): Wildfire_Record("California", 2020, 10000, 4.2_Mil),
+  ("Florida", 2021): Wildfire_Record("Florida", 2021, 652, 8000),
+  ("Pennsylvania", 2022): Wildfire_Record("Pennsylvania", 2022, 10000, 2700),
+  ("New York", 2023): Wildfire_Record("New York", 2023, 429, 6031),
+}
+#2 We made a dictionary that contains all of the information we have on wildfires. All that is left is 
+# to search for the wildfires, and if its not in our "data base" then we can't find it. 

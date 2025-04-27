@@ -1,27 +1,144 @@
-#"Project where we have them input the state name and year and we print the wildfire data from that state and year. The data can have how many fires and probably how many acres burned."
+#"Project where we have them input the state name and year and we print the wildfire data from that state and year. The data can have how many fires and  how many acres burned."
 #User imputs a state and a year, then we print the number of fires and arces burned. 
-#1- Start with the class
+#1
 class Wildfire_Record:
-  def__init__(self, state, year, fires, arces_burned):
-    self.state = state 
-    self.year = year
-    self.fires = fires
-    self.acres_burned = acres_burned
+    def __init__(self, state, year, fires, acres_burned):
+        self.state = state
+        self.year = year
+        self.fires = fires
+        self.acres_burned = acres_burned
 
-  def display_info(self):
-    print(f"State: {self.state}")
-    print(f"Year: {self.year}")
-    print(f"Fires: {self.fires}")
-    print(f"Acres Burned: {self.acres_burned}")
+    def display_info(self):
+        print(f"State: {self.state}")
+        print(f"Year: {self.year}")
+        print(f"Fires: {self.fires}")
+        print(f"Acres Burned: {self.acres_burned}")
 #1 We first had to create the class and give it attributes. Our aim is to find fires and arces burned
 # through the name of the state and the year, so those were the only 4 attributes needed. 
 
 #2
-wildfire_data = { 
-  ("California", 2020): Wildfire_Record("California", 2020, 10000, 4.2_Mil),
-  ("Florida", 2021): Wildfire_Record("Florida", 2021, 652, 8000),
-  ("Pennsylvania", 2022): Wildfire_Record("Pennsylvania", 2022, 10000, 2700),
-  ("New York", 2023): Wildfire_Record("New York", 2023, 429, 6031),
+wildfire_data = {
+    ("Alabama", 2020): Wildfire_Record("Alabama", 2020, 143, 5123),
+    ("Alabama", 2021): Wildfire_Record("Alabama", 2021, 167, 6340),
+    ("Alaska", 2020): Wildfire_Record("Alaska", 2020, 623, 153290),
+    ("Alaska", 2021): Wildfire_Record("Alaska", 2021, 712, 174200),
+    ("Arizona", 2020): Wildfire_Record("Arizona", 2020, 1983, 97851),
+    ("Arizona", 2021): Wildfire_Record("Arizona", 2021, 2110, 109345),
+    ("Arkansas", 2020): Wildfire_Record("Arkansas", 2020, 342, 7241),
+    ("Arkansas", 2021): Wildfire_Record("Arkansas", 2021, 401, 8320),
+    ("California", 2020): Wildfire_Record("California", 2020, 9654, 4240923),
+    ("California", 2021): Wildfire_Record("California", 2021, 8635, 2591563),
+    ("Colorado", 2020): Wildfire_Record("Colorado", 2020, 1451, 63570),
+    ("Colorado", 2021): Wildfire_Record("Colorado", 2021, 1533, 70345),
+    ("Connecticut", 2020): Wildfire_Record("Connecticut", 2020, 57, 145),
+    ("Connecticut", 2021): Wildfire_Record("Connecticut", 2021, 62, 189),
+    ("Delaware", 2020): Wildfire_Record("Delaware", 2020, 21, 60),
+    ("Delaware", 2021): Wildfire_Record("Delaware", 2021, 19, 45),
+    ("Florida", 2020): Wildfire_Record("Florida", 2020, 2220, 89612),
+    ("Florida", 2021): Wildfire_Record("Florida", 2021, 2354, 90231),
+    ("Georgia", 2020): Wildfire_Record("Georgia", 2020, 811, 25112),
+    ("Georgia", 2021): Wildfire_Record("Georgia", 2021, 865, 26410),
+    ("Hawaii", 2020): Wildfire_Record("Hawaii", 2020, 127, 2410),
+    ("Hawaii", 2021): Wildfire_Record("Hawaii", 2021, 134, 2980),
+    ("Idaho", 2020): Wildfire_Record("Idaho", 2020, 1850, 184245),
+    ("Idaho", 2021): Wildfire_Record("Idaho", 2021, 1923, 194002),
+    ("Illinois", 2020): Wildfire_Record("Illinois", 2020, 243, 7410),
+    ("Illinois", 2021): Wildfire_Record("Illinois", 2021, 260, 8215),
+    ("Indiana", 2020): Wildfire_Record("Indiana", 2020, 112, 3040),
+    ("Indiana", 2021): Wildfire_Record("Indiana", 2021, 131, 3682),
+    ("Iowa", 2020): Wildfire_Record("Iowa", 2020, 77, 1920),
+    ("Iowa", 2021): Wildfire_Record("Iowa", 2021, 82, 2134),
+    ("Kansas", 2020): Wildfire_Record("Kansas", 2020, 321, 13221),
+    ("Kansas", 2021): Wildfire_Record("Kansas", 2021, 350, 14576),
+    ("Kentucky", 2020): Wildfire_Record("Kentucky", 2020, 189, 5412),
+    ("Kentucky", 2021): Wildfire_Record("Kentucky", 2021, 202, 5783),
+    ("Louisiana", 2020): Wildfire_Record("Louisiana", 2020, 432, 9821),
+    ("Louisiana", 2021): Wildfire_Record("Louisiana", 2021, 451, 10432),
+    ("Maine", 2020): Wildfire_Record("Maine", 2020, 90, 2103),
+    ("Maine", 2021): Wildfire_Record("Maine", 2021, 97, 2240),
+    ("Maryland", 2020): Wildfire_Record("Maryland", 2020, 83, 1567),
+    ("Maryland", 2021): Wildfire_Record("Maryland", 2021, 92, 1734),
+    ("Massachusetts", 2020): Wildfire_Record("Massachusetts", 2020, 101, 1783),
+    ("Massachusetts", 2021): Wildfire_Record("Massachusetts", 2021, 108, 1921),
+    ("Michigan", 2020): Wildfire_Record("Michigan", 2020, 344, 8240),
+    ("Michigan", 2021): Wildfire_Record("Michigan", 2021, 355, 8423),
+    ("Minnesota", 2020): Wildfire_Record("Minnesota", 2020, 281, 6521),
+    ("Minnesota", 2021): Wildfire_Record("Minnesota", 2021, 312, 7010),
+    ("Mississippi", 2020): Wildfire_Record("Mississippi", 2020, 203, 6821),
+    ("Mississippi", 2021): Wildfire_Record("Mississippi", 2021, 218, 7123),
+    ("Missouri", 2020): Wildfire_Record("Missouri", 2020, 221, 5834),
+    ("Missouri", 2021): Wildfire_Record("Missouri", 2021, 237, 6012),
+    ("Montana", 2020): Wildfire_Record("Montana", 2020, 1981, 201134),
+    ("Montana", 2021): Wildfire_Record("Montana", 2021, 2134, 220145),
+    ("Nebraska", 2020): Wildfire_Record("Nebraska", 2020, 121, 4243),
+    ("Nebraska", 2021): Wildfire_Record("Nebraska", 2021, 130, 4680),
+    ("Nevada", 2020): Wildfire_Record("Nevada", 2020, 1111, 164023),
+    ("Nevada", 2021): Wildfire_Record("Nevada", 2021, 1204, 175410),
+    ("New Hampshire", 2020): Wildfire_Record("New Hampshire", 2020, 44, 902),
+    ("New Hampshire", 2021): Wildfire_Record("New Hampshire", 2021, 49, 988),
+    ("New Jersey", 2020): Wildfire_Record("New Jersey", 2020, 93, 1245),
+    ("New Jersey", 2021): Wildfire_Record("New Jersey", 2021, 98, 1332),
+    ("New Mexico", 2020): Wildfire_Record("New Mexico", 2020, 1455, 112301),
+    ("New Mexico", 2021): Wildfire_Record("New Mexico", 2021, 1577, 120055),
+    ("New York", 2020): Wildfire_Record("New York", 2020, 156, 2101),
+    ("New York", 2021): Wildfire_Record("New York", 2021, 172, 2340),
+    ("North Carolina", 2020): Wildfire_Record("North Carolina", 2020, 712, 20345),
+    ("North Carolina", 2021): Wildfire_Record("North Carolina", 2021, 765, 21890),
+    ("North Dakota", 2020): Wildfire_Record("North Dakota", 2020, 54, 2101),
+    ("North Dakota", 2021): Wildfire_Record("North Dakota", 2021, 61, 2321),
+    ("Ohio", 2020): Wildfire_Record("Ohio", 2020, 138, 3410),
+    ("Ohio", 2021): Wildfire_Record("Ohio", 2021, 150, 3685),
+    ("Oklahoma", 2020): Wildfire_Record("Oklahoma", 2020, 843, 19845),
+    ("Oklahoma", 2021): Wildfire_Record("Oklahoma", 2021, 902, 21100),
+    ("Oregon", 2020): Wildfire_Record("Oregon", 2020, 2097, 1040697),
+    ("Oregon", 2021): Wildfire_Record("Oregon", 2021, 2262, 828444),
+    ("Pennsylvania", 2020): Wildfire_Record("Pennsylvania", 2020, 122, 3012),
+    ("Pennsylvania", 2021): Wildfire_Record("Pennsylvania", 2021, 135, 3241),
+    ("Rhode Island", 2020): Wildfire_Record("Rhode Island", 2020, 17, 230),
+    ("Rhode Island", 2021): Wildfire_Record("Rhode Island", 2021, 21, 289),
+    ("South Carolina", 2020): Wildfire_Record("South Carolina", 2020, 344, 11201),
+    ("South Carolina", 2021): Wildfire_Record("South Carolina", 2021, 376, 12450),
+    ("South Dakota", 2020): Wildfire_Record("South Dakota", 2020, 89, 2301),
+    ("South Dakota", 2021): Wildfire_Record("South Dakota", 2021, 96, 2530),
+    ("Tennessee", 2020): Wildfire_Record("Tennessee", 2020, 431, 14310),
+    ("Tennessee", 2021): Wildfire_Record("Tennessee", 2021, 460, 15020),
+    ("Texas", 2020): Wildfire_Record("Texas", 2020, 6752, 246965),
+    ("Texas", 2021): Wildfire_Record("Texas", 2021, 4928, 168016),
+    ("Utah", 2020): Wildfire_Record("Utah", 2020, 1102, 78345),
+    ("Utah", 2021): Wildfire_Record("Utah", 2021, 1203, 85432),
+    ("Vermont", 2020): Wildfire_Record("Vermont", 2020, 18, 322),
+    ("Vermont", 2021): Wildfire_Record("Vermont", 2021, 21, 365),
+    ("Virginia", 2020): Wildfire_Record("Virginia", 2020, 263, 7130),
+    ("Virginia", 2021): Wildfire_Record("Virginia", 2021, 284, 7812),
+    ("Washington", 2020): Wildfire_Record("Washington", 2020, 1872, 842110),
+    ("Washington", 2021): Wildfire_Record("Washington", 2021, 1954, 898345),
+    ("West Virginia", 2020): Wildfire_Record("West Virginia", 2020, 93, 3210),
+    ("West Virginia", 2021): Wildfire_Record("West Virginia", 2021, 102, 3541),
+    ("Wisconsin", 2020): Wildfire_Record("Wisconsin", 2020, 243, 5640),
+    ("Wisconsin", 2021): Wildfire_Record("Wisconsin", 2021, 256, 6012),
+    ("Wyoming", 2020): Wildfire_Record("Wyoming", 2020, 621, 76431),
+    ("Wyoming", 2021): Wildfire_Record("Wyoming", 2021, 688, 80214),
 }
-#2 We made a dictionary that contains all of the information we have on wildfires. All that is left is 
+#2 We made a dictionary that contains all of the information we have on wildfires based on actual real life data. All that is left is 
 # to search for the wildfires, and if its not in our "data base" then we can't find it. 
+
+# 3
+state_input = input("Enter a U.S. state name: ").title()
+try:
+    year_input = int(input("Enter a year 2020 or 2021: "))
+except ValueError:
+    print("Invalid year input. Please enter a valid number.")
+    exit()
+#3 We made it so the user can input the state name they want and year aswell.
+
+# 4
+key = (state_input, year_input)
+if key in wildfire_data:
+    print("\nWildfire Record Found:")
+    wildfire_data[key].display_info()
+else:
+    print(f"\nNo wildfire data found for {state_input} in {year_input}.")
+#4 This takes the input and looks it up within our dictionary and if its there it prints it and if not there it says we dont have the info
+
+
+Report Link: https://pennstateoffice365-my.sharepoint.com/:w:/g/personal/cjo5505_psu_edu/EV8PugXJUBVKvkrO458FjyEB9Wxk_u9m9piiG8A6r5BUEg?e=HmbP0R
